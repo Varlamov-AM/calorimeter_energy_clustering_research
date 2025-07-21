@@ -27,17 +27,16 @@ pip install -r requirements.txt
 ## Usage
 
 1. **Prepare the Dataset**:
-   Compile and run the C++ script:
+   Run the C++ script with root-clang interpretation:
    ```bash
-   g++ src/prepare_dataset.cpp -o prepare_dataset
-   ./prepare_dataset
+   root -l scripts/prepare_dataset_from_root_file.cpp
    ```
    This generates the dataset in `dataset/`.
 
 2. **Train the Neural Network**:
    Run the Python script:
    ```bash
-   python src/train_model.py
+   python scripts/main.py
    ```
    Outputs include trained models in `models/` (ignored by git) and results in `images/`.
 
